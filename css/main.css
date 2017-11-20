@@ -31,14 +31,15 @@ h3{
 
 textarea {
   overflow: hidden;
+  resize: none;
 }
 
-.box {
+.twettBox {
   padding: 10px;
-  margin: 0 auto;
-  width: 150px;
+  width: 250px;
   height: auto;
   border-radius: 20px;
   background-color: white;
+  color: black;
 
 }

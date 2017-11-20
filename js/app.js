@@ -1,31 +1,45 @@
-var textarea = document.getElementsByTagName('textarea');
-var btn = document.getElementsById('btn');
-var contador = document.getElementsByClassName('cont');
+window.onload = x;
+function x(){
+var textarea = document.getElementById('textarea');
+var btn = document.getElementById('btn');
+var contenedor = document.getElementById('twettBox');
 
-textarea.addEventListener('keyup', value);
-validar();
-textarea.addEventListener('keyup', countString);
-textarea.addEventListener('keydown', textareaAutosize);
+// textarea.addEventListener('keyup', value);
+// validar();
+textarea.addEventListener('keyup', contando);
+// textarea.addEventListener('keydown', textareaAutosize);
 
-
+var btn = document.getElementById('btn');
 btn.addEventListener('click', sendTweet);
+var post_son=document.createElement("p");
+var post=document.querySelector("#twettBox");
+var contenido=post.appendChild(post_son);
 function sendTweet (event){
-  var valueTextArea = textarea.value;
-  var publicc = document.createElement('div');
-  publicc.textContent = valueTextArea;
-  document.querySelector('#twettBox').appendChild(publiccs);
-  document.querySelector('.textarea').value = '';
+	event.preventDefault();
+	contenido.innerHTML=textarea.value+'<br><br>'+moment().format('LT');
+	
 }
- 
 
 
-function valueBtn(){
-	  if(document.querySelector('.textarea').value === ''){
+
+
+
+
+
+function contando(){
+  var quantity = 140 - (document.getElementsByClassName('textarea').value.length);
+  document.getElementsByClassName('cont').textContent = quantity; 
+
+
+
+	function funcBtn() {
+	  if(document.querySelector('#textarea').value === ''){
 	    btn.disabled = true;
 	  } else {
 	    btn.disabled = false;
 	  }
 	}
+}
 
 // textarea agranda
 function textareaAutosize() {
@@ -34,5 +48,5 @@ function textareaAutosize() {
 	    box.style.cssText = 'height: auto; padding: 0';
 	    box.style.cssText = 'height:' + box.scrollHeight + 'px';
 	  },0);
-	}
+}
 }
