@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E5F4F9;
+  
+}
+
+.headr {
+  height: 50px;
+  width: auto;
+  background-color:skyblue;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+h3{
+  margin-top: 0;
+}
+
+.cont1 {
+  height: 120px;
+  width: 300px;
+  background-color: white;
+}
+
+textarea {
+  overflow: hidden;
+}
+
+.box {
+  padding: 10px;
+  margin: 0 auto;
+  width: 150px;
+  height: auto;
+  border-radius: 20px;
+  background-color: white;
+
+}
